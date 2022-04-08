@@ -131,13 +131,13 @@ void setup(void) {
   server.on("/", handleRoot);
 
   // Quand un client se connecte sur l'URL /setgpio/1
-  server.on("/setgpio/1", []() {
+  server.on("/setmethod/1", []() {
     //digitalWrite(relayPin, HIGH); // Activation de relais
     handleRoot();                 // appel de la fonction handleRoot()
   });
 
   // Quand un client se connecte sur l'URL /setgpio/0
-  server.on("/setgpio/0", []() {
+  server.on("/setmethod/0", []() {
     //digitalWrite(relayPin, LOW);  // DÃ©sactivation de relais
     handleRoot();                 // appel de la fonction handleRoot()
   });
