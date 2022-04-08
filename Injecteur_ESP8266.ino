@@ -54,6 +54,14 @@ void handleRoot() {
   s += (val)?"0":"1";
   s += "\">M&eacute;thode 2</a></div>\r\n";
 
+  s += "<br/><br/><div><a style=\"display:block; height:70px; background-color:";
+  s += (val)?"red":"DarkRed";   // La couleur du bouton change selon l'Ã©tat du relais
+  s += "; color:white; text-align:center; padding:20px; margin:20px; font-size:300%; text-decoration: none;\" href=\"http://";
+  s += WiFi.localIP().toString();
+  s += "/setgpio/";
+  s += (val)?"0":"1";
+  s += "\">M&eacute;thode 3</a></div>\r\n";
+
   // Informations de connexion (SSID et force du signal)
   s += "<p style=\"margin:20px;\">Connect&eacute; &agrave; : ";
   s += ssid;
