@@ -25,10 +25,7 @@ ESP8266WebServer server(80);
 
 /****************************************************************************/
 void handleRoot() {
-  int val;
-
-  // Lecture de l'Ã©tat du relais
-  val = 0;//digitalRead(relayPin);
+  int val = 0;
 
   // En-tÃªte et titre de la page
   String s = "<!DOCTYPE HTML>\r\n<html><head><title>Relais ";
